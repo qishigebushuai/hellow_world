@@ -15,9 +15,7 @@ import com.quanhu.activie.base.service.BaseService;
  */
 @SuppressWarnings("serial")
 public abstract class BaseResource<T> implements Serializable {
-	public	BaseService<T>	getService(){
-		return	null;
-	}
+	public	abstract	BaseService<T>	getService();
 	
 	@RequestMapping("base/insert")
 	public	void	insert(T t)throws	Exception{
