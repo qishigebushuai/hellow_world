@@ -13,15 +13,13 @@ import com.quanhu.activie.base.dao.BaseDao;
  */
 public abstract interface BaseService<T> extends Serializable {
 
-	abstract	BaseDao<T>	getBaseDao();
+	 void	insert(T	t)throws	Exception;
 	
-	abstract void	insert(T	t)throws	Exception;
+	 void	update(T	t)throws	Exception;
 	
-	abstract void	update(T	t)throws	Exception;
+	 void	delete(Long	id)throws	Exception;
 	
-	abstract void	delete(Long	id)throws	Exception;
+	 T		selectById(Long id);
 	
-	abstract T		selectById(Long id);
-	
-	abstract List<T>	selectByIds(Long[] ids);
+	 List<T>	selectByIds(Long[] ids);
 }

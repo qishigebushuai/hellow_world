@@ -11,14 +11,14 @@ import java.util.List;
  */
 public abstract interface BaseDao<T	> extends Serializable {
 	
-	abstract void	insert(T	t)throws	Exception;
+	 void	insert(T	t)throws	Exception;
 	
-	abstract void	update(T	t)throws	Exception;
+	 void	update(T	t)throws	Exception;
 	
-	abstract void	delete(Long	id)throws	Exception;
+	 void	delete(Long	id)throws	Exception;
 	
-	abstract T		selectById(Long id);
+	 T		selectById(Long id);
 	
-	abstract List<T>	selectByIds(Long[] ids);
+	 List<T>	selectByIds(Long[] ids);
 	
 }

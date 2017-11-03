@@ -14,9 +14,7 @@ import com.quanhu.activie.base.service.BaseService;
 @SuppressWarnings("serial")
 public abstract class BaseServiceImpl<T>	implements	BaseService<T> {
 	
-	public BaseDao<T>	getBaseDao(){
-		return	null;
-	};
+	public abstract	BaseDao<T>	getBaseDao();
 	
 	public void	insert(T	t)throws	Exception{
 		getBaseDao().insert(t);
