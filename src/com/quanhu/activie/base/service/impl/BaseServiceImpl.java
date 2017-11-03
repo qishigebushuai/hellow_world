@@ -16,22 +16,27 @@ public abstract class BaseServiceImpl<T>	implements	BaseService<T> {
 	
 	public abstract	BaseDao<T>	getBaseDao();
 	
+	@Transactional(propagation=Propagation.SUPPORTS)
 	public void	insert(T	t)throws	Exception{
 		getBaseDao().insert(t);
 	};
 	
+	@Transactional(propagation=Propagation.SUPPORTS)
 	public void	update(T	t)throws	Exception{
 		getBaseDao().update(t);
 	};
 	
+	@Transactional(propagation=Propagation.SUPPORTS)
 	public void	delete(Long	id)throws	Exception{
 		getBaseDao().delete(id);
 	};
 	
+	@Transactional(readOnly=true)
 	public T		selectById(Long id){
 		return	getBaseDao().selectById(id);
 	};
 	
+	@Transactional(readOnly=true)
 	public List<T>	selectByIds(Long[] ids){
 		return	getBaseDao().selectByIds(ids);
 	};
